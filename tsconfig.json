@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "lib": ["es2017", "es2015", "dom", "es2018.promise"],
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "jsx": "react",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "noEmit": true,
+        "rootDir": "../",
+        "resolveJsonModule": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "strictNullChecks": false,
+        "strictFunctionTypes": false,
+        "target": "esnext",
+        "types": ["jest", "testing-library__jest-dom"],
+        "baseUrl": "src",
+        "paths": {
+            "@components": ["components"],
+            "@components/*": ["components/*"],
+            "@theme": ["theme"],
+            "@theme/*": ["theme/*"],
+            "@utils": ["utils"],
+            "@utils/*": ["utils/*"],
+            "@test-utils": ["utils/test-utils"],
+            "@styled": ["utils/styled"],
+            "@store": ["store"],
+            "@store/*": ["store/*"]
+        }
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
+}
