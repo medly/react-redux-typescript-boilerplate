@@ -40,42 +40,42 @@ Just download this repo and change the project name.
 
 ## Table of Contents
 
-1. [Create project directory](#create-project-directory)
-2. [Create npm package](#create-npm-package)
-3. [Create git repository](#create-git-repository)
-4. [Add react libraries](#add-react-libraries)
-5. [Add Eslint](#add-eslint)
-6. [Add Prettier](#add-prettier)
-7. [Add editorconfig file](#add-editorconfig-file)
-8. [Add Typescript](#add-typescript)
-9. [Add Vscode config files](#add-vscode-config-files)
-10. [Add Babel](#add-babel)
-11. [Add index.html](#add-index.html)
-12. [Add Webpack](#add-webpack)
-13. [Add React-hot-loader](#add-react-hot-loader)
-14. [Add Webpack plugins](#add-webpack-plugins)
-15. [Add stylelint](#add-styleint)
-16. [Add Jest](#add-jest)
-17. [Add commitizen & commitlint](#add-commitizen-&-commitlint)
-18. [Add Redux](#add-redux)
+1. [Create project directory](#-create-project-directory)
+2. [Create npm package](#-create-npm-package)
+3. [Create git repository](#-create-git-repository)
+4. [Add react libraries](#-add-react-libraries)
+5. [Add Eslint](#-add-eslint)
+6. [Add Prettier](#-add-prettier)
+7. [Add editorconfig file](#-add-editorconfig-file)
+8. [Add Typescript](#-add-typescript)
+9. [Add Vscode config files](#-add-vscode-config-files)
+10. [Add Babel](#-add-babel)
+11. [Add index.html](#-add-index.html)
+12. [Add Webpack](#-add-webpack)
+13. [Add React-hot-loader](#-add-react-hot-loader)
+14. [Add Webpack plugins](#-add-webpack-plugins)
+15. [Add stylelint](#-add-styleint)
+16. [Add Jest](#-add-jest)
+17. [Add commitizen & commitlint](#-add-commitizen-&-commitlint)
+18. [Add Redux](#-add-redux)
 
-## 1. Create project directory
+#### 1. Create project directory
 
     `mkdir my-project && cd my-project`
 
-## 2. Create npm package
+#### 2. Create npm package
 
     `npm init`
 
-## 3. Create git repository
+#### 3. Create git repository
 
     `git init`
 
-## 4. Add react libraries
+#### 4. Add react libraries
 
     `yarn add react react-dom`
 
-## 5. Add Eslint
+#### 5. Add Eslint
 
 -   add eslint `yarn add -D eslint`
 
@@ -157,7 +157,7 @@ coverage
 }
 ```
 
-## 6. Add Prettier
+#### 6. Add Prettier
 
     `yarn add -D prettier eslint-config-prettier eslint-plugin-prettier`
 
@@ -189,7 +189,7 @@ Add .preetierrc
 }
 ```
 
-## 7. Add editorconfig file
+#### 7. Add editorconfig file
 
 .editorconfig
 
@@ -212,7 +212,7 @@ indent_style = space
 indent_size = 4
 ```
 
-## 8. Add Typescript
+#### 8. Add Typescript
 
 `yarn add -W typescript`
 
@@ -247,7 +247,7 @@ indent_size = 4
 }
 ```
 
-## 9. Add Vscode config files
+#### 9. Add Vscode config files
 
 -   Add settings.json file
 
@@ -278,7 +278,7 @@ indent_size = 4
 }
 ```
 
-## 10. Add Babel
+#### 10. Add Babel
 
     `yarn add -D babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript`
 
@@ -293,7 +293,7 @@ module.exports = function (api) {
 };
 ```
 
-## 11. Add index.html
+#### 11. Add index.html
 
 #### **`public/index.html`**
 
@@ -312,7 +312,7 @@ module.exports = function (api) {
 </html>
 ```
 
-## 12. Add Webpack
+#### 12. Add Webpack
 
     `yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin`
 
@@ -358,7 +358,7 @@ module.exports = {
 
 Add script in package.json `"start": "webpack-dev-server --mode development --hot"`
 
-## 13. Add React-hot-loader
+#### 13. Add React-hot-loader
 
 This will hot reload the app, keeping the components state.
 
@@ -386,7 +386,7 @@ This will hot reload the app, keeping the components state.
 -   wrap your app in hot();
     `export default hot(App)`
 
-## 14. Add Webpack plugins
+#### 14. Add Webpack plugins
 
 Few useful webpack plugins
 
@@ -535,7 +535,7 @@ if (process.env.BUNDLE_ANALYZE) config.plugins = [new BundleAnalyzerPlugin()];
 module.exports = merge(common, config);
 ```
 
-## 15. Add stylelint
+#### 15. Add stylelint
 
 `yarn add -D stylelint stylelint-config-prettier stylelint-config-standard stylelint-config-styled-components stylelint-custom-processor-loader stylelint-prettier babel-plugin-styled-components`
 
@@ -605,7 +605,7 @@ plugins = [
 }
 ```
 
-## 16. Add Jest
+#### 16. Add Jest
 
 `yarn add -D jest @testing-library/react @testing-library/jest-dom jest-styled-components`
 
@@ -693,7 +693,7 @@ module.exports = {};
 }
 ```
 
-## 17. Add commitizen & commitlint
+#### 17. Add commitizen & commitlint
 
 `yarn add -W husky commitizen @commitlint/cli @commitlint/config-conventional cz-conventional-changelog`
 
@@ -723,7 +723,7 @@ module.exports = {
 }
 ```
 
-## 18. Add Redux
+#### 18. Add Redux
 
 `yarn add redux react-redux redux-saga`
 
