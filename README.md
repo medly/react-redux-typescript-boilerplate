@@ -58,6 +58,7 @@ Just download this repo and change the project name.
 16. [Add Jest](#-add-jest)
 17. [Add commitizen & commitlint](#-add-commitizen-&-commitlint)
 18. [Add Redux](#-add-redux)
+19. [Add SVG Loader](#-add-svg-loader)
 
 #### 1. Create project directory
 
@@ -775,3 +776,27 @@ ReactDOM.render(
     document.getElementById('root')
 );
 ```
+
+#### 18. Add SVG Loader
+
+-   Add these packages `yarn add -D @svgr/webpack babel-plugin-inline-react-svg`
+
+-   Add `inline-react-svg` in babel config plugins.
+
+-   Add Svg loader in webpack config
+
+```json
+{
+    "test": /\.svg$/,
+    "use": [
+        {
+            "loader": "@svgr/webpack",
+            "options": {
+                "icon": true
+            }
+        }
+    ]
+}
+```
+
+-   Add svg in extensions in jest config `moduleFileExtensions: ['.mjs', 'ts', 'tsx', 'js', 'jsx', 'svg'],`

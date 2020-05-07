@@ -7,10 +7,11 @@ module.exports = function (api) {
                     pure: true,
                     displayName: true,
                     minify: true,
-                    transpileTemplateLiterals: true,
-                },
+                    transpileTemplateLiterals: true
+                }
             ],
             '@babel/plugin-transform-runtime',
+            'inline-react-svg'
         ];
 
     if (api.env() === 'development') {

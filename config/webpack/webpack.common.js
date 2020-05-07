@@ -18,15 +18,26 @@ module.exports = {
     entry: [ENTRY],
     performance: {
         maxAssetSize: 500000,
-        maxEntrypointSize: 500000,
+        maxEntrypointSize: 500000
     },
     resolve: {
         extensions: ['.js', '.ts', '.tsx', '.json'],
         symlinks: false,
-        plugins: [new TsconfigPathsPlugin()],
+        plugins: [new TsconfigPathsPlugin()]
     },
     module: {
         rules: [
+            {
+                test: /\.svg$/,
+                use: [
+                    {
+                        loader: '@svgr/webpack',
+                        options: {
+                            icon: true
+                        }
+                    }
+                ]
+            },
             {
                 test: /\.tsx?$/,
                 include: SRC,
@@ -36,14 +47,14 @@ module.exports = {
                         loader: 'thread-loader',
                         options: {
                             workers: 2,
-                            workerParallelJobs: 50,
-                        },
+                            workerParallelJobs: 50
+                        }
                     },
                     'babel-loader',
-                    'stylelint-custom-processor-loader',
-                ],
-            },
-        ],
+                    'stylelint-custom-processor-loader'
+                ]
+            }
+        ]
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -51,16 +62,16 @@ module.exports = {
             template: INDEX_HTML,
             minify: {
                 collapseWhitespace: true,
-                removeComments: true,
-            },
+                removeComments: true
+            }
         }),
         new CopyPlugin([{ from: STATIC, to: DIST }]),
         new ForkTsCheckerWebpackPlugin(),
         new CircularDependencyPlugin({
             exclude: /node_modules/,
-            failOnError: true,
+            failOnError: true
         }),
         new webpack.HashedModuleIdsPlugin(),
-        new CompressionPlugin(),
-    ],
+        new CompressionPlugin()
+    ]
 };
