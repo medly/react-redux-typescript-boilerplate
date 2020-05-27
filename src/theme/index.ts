@@ -1,4 +1,5 @@
 import { defaultTheme as medlyDefaultTheme, Theme as MedlyTheme } from '@medly-components/theme';
+import { CSSProp } from "styled-components";
 import { coreDefaultTheme } from './core';
 import { layoutDefaultTheme } from './layout';
 
@@ -11,3 +12,10 @@ export const defaultTheme = {
 };
 
 export type Theme = MedlyTheme;
+
+
+declare module "react" {
+  interface Attributes {
+    css?: CSSProp;
+  }
+}
