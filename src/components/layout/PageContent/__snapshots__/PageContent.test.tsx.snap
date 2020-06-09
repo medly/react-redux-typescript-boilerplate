@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageContent component should render properly 1`] = `
+.c0 {
+  background-color: #eff2f4;
+  overflow: auto;
+  padding-top: 32px;
+}
+
+@media (max-width:1279px) {
+  .c0 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width:1280px) {
+  .c0 {
+    padding-left: calc(24px + (((100vw - 1280px) / 160) * 16));
+    padding-right: calc(24px + (((100vw - 1280px) / 160) * 16));
+  }
+}
+
+@media (min-width:1440px) {
+  .c0 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+<div>
+  <main
+    class="c0"
+  >
+    Demo PageContent
+  </main>
+</div>
+`;

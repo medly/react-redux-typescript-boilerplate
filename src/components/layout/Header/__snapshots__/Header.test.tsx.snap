@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render properly 1`] = `
+.c3 {
+  margin: 0;
+  color: inherit;
+  font-size: 1.8rem;
+  font-weight: 700;
+  -webkit-letter-spacing: -0.02rem;
+  -moz-letter-spacing: -0.02rem;
+  -ms-letter-spacing: -0.02rem;
+  letter-spacing: -0.02rem;
+  line-height: 2.4rem;
+}
+
+.c6 {
+  margin: 0;
+  color: inherit;
+  font-size: 1.4rem;
+  font-weight: 700;
+  -webkit-letter-spacing: 0rem;
+  -moz-letter-spacing: 0rem;
+  -ms-letter-spacing: 0rem;
+  letter-spacing: 0rem;
+  line-height: 2.2rem;
+  text-transform: uppercase;
+}
+
+.c5 {
+  display: inline-block;
+  text-align: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  color: #005AEE;
+  background: #e6effd;
+}
+
+.c5 .c2 {
+  line-height: 4rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: Open Sans;
+}
+
+.c5 img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border: 0.1rem solid #dfe4e9;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.c5:hover {
+  background: #1A6BF0;
+  box-shadow: 0 0.4rem 0.8rem rgba(0,90,238,0.35);
+}
+
+.c5:hover .c2 {
+  color: #ffffff;
+}
+
+.c0 {
+  min-height: 72px;
+  background-color: white;
+  padding: 0 2%;
+  box-shadow: 0 2px 8 rgba(176,188,200,0.2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 > * {
+  margin-right: 0.8rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 > * {
+  margin-left: 0.8rem;
+}
+
+<div>
+  <header
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <h4
+        class="c2 c3"
+      >
+        Boilerplate
+      </h4>
+    </div>
+    <div
+      class="c4"
+    >
+      <div
+        class="c5"
+      >
+        <strong
+          class="c2 c6"
+        >
+          JD
+        </strong>
+      </div>
+    </div>
+  </header>
+</div>
+`;

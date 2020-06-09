@@ -11,6 +11,7 @@ module.exports = {
     collectCoverageFrom: [
         '<rootDir>/src/**/*.(ts|tsx)',
         '!<rootDir>/**/index.(ts|tsx)',
+        '!<rootDir>/src/App.tsx',
         '!<rootDir>/src/theme/**',
         '!<rootDir>/src/icons/**',
         '!<rootDir>/src/store/sagas.ts',

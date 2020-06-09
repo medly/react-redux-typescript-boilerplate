@@ -1,10 +1,10 @@
 import { render } from '@test-utils';
 import React from 'react';
-import { App } from './App';
+import Header from './Header';
 
-describe('App', () => {
+describe('Header', () => {
     it('should render properly', () => {
-        const { container } = render(<App />);
+        const { container } = render(<Header />);
         expect(container).toMatchSnapshot();
     });
 });

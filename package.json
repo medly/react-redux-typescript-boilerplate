@@ -14,7 +14,8 @@
         "test:jest": "jest --config config/jest/jest.config.js",
         "build": "cross-env BABEL_ENV=production webpack --progress --config config/webpack/webpack.prod.js",
         "build:analyze": "cross-env BUNDLE_ANALYZE=true npm run build -- --watch",
-        "watch": "webpack-dev-server --open --config config/webpack/webpack.dev.js"
+        "watch": "webpack-dev-server --open --config config/webpack/webpack.dev.js",
+        "update:components": "rimraf yarn.lock && rimraf node_modules && yarn install"
     },
     "author": "Mukul Bansal",
     "license": "ISC",
@@ -31,12 +32,14 @@
     },
     "dependencies": {
         "@medly-components/core": "^1.0.0-beta.24",
+        "@medly-components/forms": "^1.0.0-beta.3",
+        "@medly-components/layout": "^1.0.0-beta.37",
         "@medly-components/theme": "^1.0.0-beta.12",
         "axios": "^0.19.2",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-redux": "^7.2.0",
-        "react-router-dom": "^5.1.2",
+        "react-router-dom": "^5.2.0",
         "redux": "^4.0.5",
         "redux-saga": "^1.1.3",
         "styled-components": "^5.0.1"
