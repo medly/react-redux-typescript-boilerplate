@@ -1,5 +1,5 @@
-import avatar from './avatar';
+import font from './font';
 
 export const coreDefaultTheme = {
-    avatar,
+    font
 };
