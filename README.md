@@ -27,17 +27,18 @@ This boilerplate will help you to quick start your project.
 
 ## npm scripts
 
--   `yarn build` to build your project
--   `yarn build:analyze` to analyze the bundle size
--   `yarn lint:css` to run the css lint
--   `yarn lint:ts` to run the ts lint
 -   `yarn lint` to run both css & ts lint
 -   `yarn test` to run tests and type check
+-   `yarn dist` to build your project
+-   `yarn clean` to remove the dist and coverage folder
+-   `yarn watch` to run your project locally
+-   `yarn type-check` to run tsc to check types
+-   `yarn bundle:analyze` to analyze the bundle size
+-   `yarn lint:css` to run the css lint
+-   `yarn lint:ts` to run the ts lint
 -   `yarn test:update` to upgrate snapshots
 -   `yarn test:watch` to watch tests
--   `yarn type-check` to run tsc to check types
 -   `yarn test:jest` to run test only
--   `yarn watch` to run your project locally
 
 ## Table of Contents
 
