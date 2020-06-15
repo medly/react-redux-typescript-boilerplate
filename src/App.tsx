@@ -15,7 +15,7 @@ export const App: React.SFC = () => (
                 <CssBaseline />
                 <Router>
                     <PageLayout>
-                        <SideNav/>
+                        <SideNav />
                         <Header />
                         <Routes />
                     </PageLayout>

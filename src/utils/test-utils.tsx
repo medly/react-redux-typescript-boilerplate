@@ -48,16 +48,13 @@ const WithStoreAndRouter: React.FunctionComponent = props => (
     </Provider>
 );
 
-const customRender = (ui: React.ReactElement<any>, options?: object): RenderResult =>
-    render(ui, { wrapper: WithThemeProvider, ...options });
+const customRender = (ui: React.ReactElement, options?: object): RenderResult => render(ui, { wrapper: WithThemeProvider, ...options });
 
-export const renderWithStore = (ui: React.ReactElement<any>, options?: object): RenderResult =>
-    render(ui, { wrapper: WithStore, ...options });
+export const renderWithStore = (ui: React.ReactElement, options?: object): RenderResult => render(ui, { wrapper: WithStore, ...options });
 
-export const renderWithRouter = (ui: React.ReactElement<any>, options?: object): RenderResult =>
-    render(ui, { wrapper: WithRouter, ...options });
+export const renderWithRouter = (ui: React.ReactElement, options?: object): RenderResult => render(ui, { wrapper: WithRouter, ...options });
 
-export const renderWithStoreAndRouter = (ui: React.ReactElement<any>, options?: object): RenderResult =>
+export const renderWithStoreAndRouter = (ui: React.ReactElement, options?: object): RenderResult =>
     render(ui, { wrapper: WithStoreAndRouter, ...options });
 
 // re-export everything

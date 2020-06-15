@@ -3,4 +3,3 @@ dist
 coverage
 config
 babel.config.js
-commitlint.config.js

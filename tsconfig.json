@@ -1,22 +1,23 @@
 {
     "compilerOptions": {
         "allowJs": true,
-        "lib": ["es2017", "es2015", "dom", "es2018.promise"],
+        "baseUrl": "src",
         "esModuleInterop": true,
         "isolatedModules": true,
+        "forceConsistentCasingInFileNames": true,
         "jsx": "react",
+        "lib": ["es2017", "es2015", "dom", "es2018.promise"],
         "module": "esnext",
         "moduleResolution": "node",
         "noEmit": true,
-        "rootDir": "../",
         "resolveJsonModule": true,
-        "strict": true,
+        "rootDir": "../",
         "skipLibCheck": true,
-        "strictNullChecks": false,
+        "strict": true,
         "strictFunctionTypes": false,
+        "strictNullChecks": false,
         "target": "esnext",
         "types": ["jest", "testing-library__jest-dom"],
-        "baseUrl": "src",
         "paths": {
             "@components": ["components"],
             "@components/*": ["components/*"],
@@ -31,5 +32,5 @@
         }
     },
     "include": ["src"],
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules", ".commitlintrc"]
 }

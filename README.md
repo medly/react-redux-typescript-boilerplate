@@ -4,8 +4,8 @@ This boilerplate will help you to quick start your project.
 
 ## Getting Started
 
-1) Just download this repo and change the project name. 
-2) Init the commitizen before commiting anything in your new project. `commitizen init cz-conventional-changelog --yarn --dev --exact --force`
+1. Just download this repo and change the project name **OR** click on `use this template` button to create the new repo.
+2. Init the commitizen before committing anything in your new project. `commitizen init cz-conventional-changelog --yarn --dev --exact --force`
 
 ## Built With
 
@@ -124,19 +124,23 @@ So finally install `yarn add -D @typescript-eslint/eslint-plugin @typescript-esl
         "project": "./tsconfig.json"
     },
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint", "jest", "react-hooks"],
+    "plugins": ["@typescript-eslint", "jest", "react-hooks", "prettier"],
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:jest/recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "prettier/@typescript-eslint"
     ],
     "rules": {
+        "arrow-parens": ["error", "as-needed"],
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "react/jsx-no-bind": "warn",
-        "react/prop-types": "off"
+        "react/prop-types": "off",
+        "@typescript-eslint/ban-ts-ignore": "off",
+        "@typescript-eslint/explicit-function-return-type": "off"
     }
 }
 ```
@@ -225,28 +229,38 @@ indent_size = 4
 {
     "compilerOptions": {
         "allowJs": true,
-        "lib": ["es2017", "es2015", "dom", "es2018.promise"],
+        "baseUrl": "src",
         "esModuleInterop": true,
         "isolatedModules": true,
+        "forceConsistentCasingInFileNames": true,
         "jsx": "react",
+        "lib": ["es2017", "es2015", "dom", "es2018.promise"],
         "module": "esnext",
         "moduleResolution": "node",
         "noEmit": true,
-        "rootDir": "../",
         "resolveJsonModule": true,
-        "strict": true,
+        "rootDir": "../",
         "skipLibCheck": true,
-        "strictNullChecks": false,
+        "strict": true,
         "strictFunctionTypes": false,
+        "strictNullChecks": false,
         "target": "esnext",
-        "types": ["webpack-env", "jest"],
-        "baseUrl": "src",
+        "types": ["jest", "testing-library__jest-dom"],
         "paths": {
-            "@components": ["components"]
+            "@components": ["components"],
+            "@components/*": ["components/*"],
+            "@theme": ["theme"],
+            "@theme/*": ["theme/*"],
+            "@utils": ["utils"],
+            "@utils/*": ["utils/*"],
+            "@test-utils": ["utils/test-utils"],
+            "@styled": ["utils/styled"],
+            "@store": ["store"],
+            "@store/*": ["store/*"]
         }
     },
     "include": ["src"],
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules", ".commitlintrc"]
 }
 ```
 
@@ -306,7 +320,7 @@ module.exports = function (api) {
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>IBD</title>
+        <title>Boilerplate</title>
     </head>
     <body>
         <div id="root" />
@@ -628,11 +642,16 @@ module.exports = {
     collectCoverageFrom: [
         '<rootDir>/src/**/*.(ts|tsx)',
         '!<rootDir>/**/index.(ts|tsx)',
+        '!<rootDir>/src/App.tsx',
         '!<rootDir>/src/theme/**',
         '!<rootDir>/src/icons/**',
+        '!<rootDir>/src/store/sagas.ts',
+        '!<rootDir>/src/utils/styled.ts',
         '!<rootDir>/node_modules/**',
         '!<rootDir>/src/**/types.(ts|tsx)',
-        '!<rootDir>/src/**/types/**'
+        '!<rootDir>/src/**/types/**',
+        '!<rootDir>/src/utils/fetch.ts',
+        '!<rootDir>/src/utils/test-utils.tsx'
     ],
     coverageDirectory: '<rootDir>/coverage/',
     moduleFileExtensions: ['.mjs', 'ts', 'tsx', 'js', 'jsx', 'svg'],
@@ -644,14 +663,17 @@ module.exports = {
     verbose: true,
     moduleNameMapper: {
         '\\.(css|less)$': '<rootDir>/config/jest/__mocks__/styleMock.js',
+        '^@styled': '<rootDir>/src/utils/styled',
+        '^@store(.*)$': '<rootDir>/src/store$1',
         '^@test-utils': '<rootDir>/src/utils/test-utils',
         '^@components(.*)$': '<rootDir>/src/components$1',
-        '^@theme(.*)$': '<rootDir>/src/theme$1'
+        '^@theme(.*)$': '<rootDir>/src/theme$1',
+        '^@utils(.*)$': '<rootDir>/src/utils$1'
     }
 };
 ```
 
--   Add localSttorage file
+-   Add localStorage file
 
 ```javascript
 const storageMock = () => {
@@ -700,12 +722,14 @@ module.exports = {};
 
 `yarn add -W husky commitizen @commitlint/cli @commitlint/config-conventional cz-conventional-changelog`
 
--   Add commitlint.config.js file
+-   Add .commitlintrc file
 
 ```javascript
-module.exports = {
-    extends: ['@commitlint/config-conventional']
-};
+{
+    "extends": [
+        "@commitlint/config-conventional"
+    ]
+}
 ```
 
 -   Add configs in package.json
