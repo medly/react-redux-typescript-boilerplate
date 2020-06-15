@@ -5,7 +5,7 @@ This boilerplate will help you to quick start your project.
 ## Getting Started
 
 1. Just download this repo and change the project name **OR** click on `use this template` button to create the new repo.
-2. Init the commitizen before committing anything in your new project. `commitizen init cz-conventional-changelog --yarn --dev --exact --force`
+2. Init the commitizen before committing anything in your new project. `npx commitizen init cz-conventional-changelog --yarn --dev --exact --force`
 
 ## Built With
 
