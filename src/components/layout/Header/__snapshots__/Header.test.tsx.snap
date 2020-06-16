@@ -33,8 +33,13 @@ exports[`Header should render properly 1`] = `
   height: 4rem;
   border-radius: 50%;
   overflow: hidden;
+  cursor: inherit;
   color: #005AEE;
   background: #e6effd;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .c5 .c2 {
