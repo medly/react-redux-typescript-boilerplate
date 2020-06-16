@@ -9,7 +9,7 @@
         "test:update": "run-p type-check 'test:jest -- -u'",
         "test:watch": "run-p 'type-check -- -w' 'test:jest -- --watch'",
         "test:jest": "jest --config config/jest/jest.config.js",
-        "bundle:analyze": "cross-env BUNDLE_ANALYZE=true npm run build -- --watch",
+        "bundle:analyze": "cross-env BUNDLE_ANALYZE=true npm run dist -- --watch",
         "update:components": "rimraf yarn.lock && rimraf node_modules && yarn install",
         "type-check": "tsc",
         "watch": "webpack-dev-server --open --config config/webpack/webpack.dev.js",
