@@ -24,4 +24,5 @@ module.exports = merge(common, {
         disableHostCheck: true,
         stats: { children: false },
     },
+    devtool: 'eval-cheap-module-source-map',
 });
