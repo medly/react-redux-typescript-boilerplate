@@ -16,7 +16,14 @@
         "clean": "rimraf dist coverage",
         "lint": "run-p -c lint:*",
         "test": "run-p type-check test:jest",
-        "dist": "cross-env BABEL_ENV=production webpack --progress --config config/webpack/webpack.prod.js"
+        "dist": "cross-env BABEL_ENV=production webpack --progress --config config/webpack/webpack.prod.js",
+        "docker-watch": "webpack-dev-server --host 0.0.0.0 --config config/webpack/webpack.dev.js",
+        "start": "NODE_ENV=production node server.js",
+        "image-build": "docker build -f Dockerfile-dev -t your-image-name .",
+        "image-remove": "docker image rm your-image-name --force",
+        "docker-dev": "docker run --rm -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -p 8080:8080 --name your-container-name your-image-name",
+        "docker-stop": "docker ps -a -q --filter status=running | xargs docker stop && echo 'stopped all running containers'",
+        "docker-update-deps": "yarn image-remove && yarn image-build"
     },
     "author": "Mukul Bansal",
     "license": "ISC",
@@ -37,6 +44,7 @@
         "@medly-components/layout": "^1.0.0-beta.37",
         "@medly-components/theme": "^1.0.0-beta.12",
         "axios": "^0.19.2",
+        "express": "^4.17.1",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-redux": "^7.2.0",
