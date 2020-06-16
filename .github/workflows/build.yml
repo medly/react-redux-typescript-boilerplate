@@ -1,6 +1,6 @@
 name: Build
 
-on: [push, label, release]
+on: [push, label, release, pull_request]
 
 jobs:
     build:
