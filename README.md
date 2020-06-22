@@ -39,6 +39,13 @@ This boilerplate will help you to quick start your project.
 -   `yarn test:update` to upgrate snapshots
 -   `yarn test:watch` to watch tests
 -   `yarn test:jest` to run test only
+-   `yarn docker-watch` to be executed as the startup command for the Docker development container (no need to manually run)
+-   `yarn image-build` to build the Docker development container
+-   `yarn image-remove` to remove the Docker development container
+-   `yarn docker-dev` to run the Docker development container with hot reloading
+-   `yarn docker-stop` to stop the running Docker development container
+-   `yarn docker-update-deps` to remove and rebuild the container image with updated dependencies
+-   `yarn docker-exec` to open an interactive ash shell inside the container
 
 ## Table of Contents
 
