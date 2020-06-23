@@ -1,3 +1,5 @@
+import { initialState } from '@state';
+import { rootSaga } from '@state/sagas';
 import { render, RenderResult } from '@testing-library/react';
 import { defaultTheme } from '@theme';
 import axios from 'axios';
@@ -7,8 +9,6 @@ import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import reduxMockStore from 'redux-mock-store';
 import reduxSaga from 'redux-saga';
-import { initialState } from 'state';
-import { rootSaga } from 'state/sagas';
 import { ThemeProvider } from './styled';
 
 export const mockAxios = new MockAdapter(axios);

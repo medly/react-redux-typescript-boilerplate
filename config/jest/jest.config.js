@@ -33,10 +33,12 @@ module.exports = {
     moduleNameMapper: {
         '\\.(css|less)$': '<rootDir>/config/jest/__mocks__/styleMock.js',
         '^@styled': '<rootDir>/src/utils/styled',
-        '^@store(.*)$': '<rootDir>/src/store$1',
+        '^@state(.*)$': '<rootDir>/src/state$1',
         '^@test-utils': '<rootDir>/src/utils/test-utils',
         '^@components(.*)$': '<rootDir>/src/components$1',
         '^@theme(.*)$': '<rootDir>/src/theme$1',
-        '^@utils(.*)$': '<rootDir>/src/utils$1'
+        '^@utils(.*)$': '<rootDir>/src/utils$1',
+        '^@pages(.*)$': '<rootDir>/src/pages$1',
+        '^@routes(.*)$': '<rootDir>/src/routes$1'
     }
 };
