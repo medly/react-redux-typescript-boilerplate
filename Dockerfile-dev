@@ -8,6 +8,6 @@ COPY package.json yarn.lock /usr/src/app/
 
 RUN yarn install
 
-CMD yarn docker-watch
+CMD yarn docker:watch
 
 EXPOSE 8080
