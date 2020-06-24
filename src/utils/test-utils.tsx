@@ -1,5 +1,5 @@
-import { initialState } from '@store';
-import { rootSaga } from '@store/sagas';
+import { initialState } from '@state';
+import { rootSaga } from '@state/sagas';
 import { render, RenderResult } from '@testing-library/react';
 import { defaultTheme } from '@theme';
 import axios from 'axios';
@@ -61,3 +61,4 @@ export const renderWithStoreAndRouter = (ui: React.ReactElement, options?: objec
 export * from '@testing-library/react';
 // override render method
 export { customRender as render, store };
+

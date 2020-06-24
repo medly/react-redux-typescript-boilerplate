@@ -27,8 +27,12 @@
             "@utils/*": ["utils/*"],
             "@test-utils": ["utils/test-utils"],
             "@styled": ["utils/styled"],
-            "@store": ["store"],
-            "@store/*": ["store/*"]
+            "@state": ["state"],
+            "@state/*": ["state/*"],
+            "@routes": ["routes"],
+            "@routes/*": ["routes/*"],
+            "@pages": ["pages"],
+            "@pages/*": ["pages/*"]
         }
     },
     "include": ["src"],

@@ -1,0 +1,13 @@
+FROM node:12.18.0-alpine
+
+RUN yarn global add webpack
+
+WORKDIR /usr/src/app
+
+COPY package.json yarn.lock /usr/src/app/
+
+RUN yarn install
+
+CMD yarn docker:watch
+
+EXPOSE 8080
