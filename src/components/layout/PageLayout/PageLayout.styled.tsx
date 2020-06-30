@@ -2,6 +2,8 @@ import { styled } from '@styled';
 
 export const PageLayoutStyled = styled('div')`
     display: grid;
+    height: 100%;
+    width: 100%;
     grid-template-areas:
         'aside header'
         'aside  main';
