@@ -35,8 +35,17 @@
     "husky": {
         "hooks": {
             "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "pre-commit": "lint-staged"
         }
+    },
+    "lint-staged": {
+        "src/**/*.{ts,tsx}": [
+          "eslint 'src/**/*.tsx' --fix", "git add"
+        ],
+        "src/**/*.scss": [
+          "stylelint 'src/**/*.tsx' --fix", "git add"
+        ]
     },
     "dependencies": {
         "@medly-components/core": "^1.0.0-beta.24",
@@ -44,6 +53,7 @@
         "@medly-components/layout": "^1.0.0-beta.37",
         "@medly-components/theme": "^1.0.0-beta.12",
         "axios": "^0.19.2",
+        "lint-staged": "^10.2.11",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-redux": "^7.2.0",
