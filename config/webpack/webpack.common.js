@@ -7,6 +7,7 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const SRC = path.resolve(__dirname, '../../src');
 const DIST = path.resolve(__dirname, '../../dist');
@@ -72,6 +73,7 @@ module.exports = {
             failOnError: true
         }),
         new webpack.HashedModuleIdsPlugin(),
-        new CompressionPlugin()
+        new CompressionPlugin(),
+        new Dotenv()
     ]
 };
