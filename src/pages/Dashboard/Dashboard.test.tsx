@@ -1,10 +1,28 @@
-import { render } from '@test-utils';
+import { renderWithRouter } from '@test-utils';
 import React from 'react';
-import { Dashboard } from './Dashboard';
+import reduxMockStore from 'redux-mock-store';
+import { Provider } from 'react-redux';
+import { initialState } from '@state';
+import Dashboard from './Dashboard.container';
 
 describe('Dashboard', () => {
+    const mockStore = reduxMockStore(),
+        renderDashboard = (store: ReturnType<typeof mockStore>) =>
+            renderWithRouter(
+                <Provider store={store}>
+                    <Dashboard />
+                </Provider>
+            );
+
     it('should render properly', () => {
-        const { container } = render(<Dashboard />);
+        const store = mockStore({ ...initialState, loading: { dashboard: { isLoading: false } } });
+        const { container } = renderDashboard(store);
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should show loading if isLoading Prop is true', () => {
+        const store = mockStore({ ...initialState, loading: { dashboard: { isLoading: true } } });
+        const { container } = renderDashboard(store);
         expect(container).toMatchSnapshot();
     });
 });
