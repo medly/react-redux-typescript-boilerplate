@@ -27,12 +27,6 @@ export const loading: Reducer<LoadingState, any> = (state = initialState, action
             };
 
         case /.*FETCH_SUCCESS/.test(action.type):
-            return {
-                ...state,
-                [storeKey]: {
-                    isLoading: false
-                }
-            };
         case /.*FETCH_FAILURE/.test(action.type):
             return {
                 ...state,
@@ -40,6 +34,7 @@ export const loading: Reducer<LoadingState, any> = (state = initialState, action
                     isLoading: false
                 }
             };
+
         default:
             return state;
     }
