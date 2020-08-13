@@ -39,10 +39,11 @@
         }
     },
     "dependencies": {
-        "@medly-components/core": "^1.0.0-beta.24",
-        "@medly-components/forms": "^1.0.0-beta.3",
-        "@medly-components/layout": "^1.0.0-beta.37",
-        "@medly-components/theme": "^1.0.0-beta.12",
+        "@medly-components/core": "^1.13.0",
+        "@medly-components/forms": "^1.5.1",
+        "@medly-components/layout": "^1.6.0",
+        "@medly-components/theme": "^1.8.0",
+        "@medly-components/loaders": "^1.0.12",
         "axios": "^0.19.2",
         "dotenv-webpack": "^2.0.0",
         "react": "^16.13.1",

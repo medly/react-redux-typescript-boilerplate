@@ -2,7 +2,7 @@ import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { PageLayoutStyled } from './PageLayout.styled';
 
-class PageContent extends React.PureComponent<RouteComponentProps> {
+class PageLayout extends React.PureComponent<RouteComponentProps> {
     public componentDidCatch() {
         this.props.history.push(this.props.location.pathname);
     }
@@ -12,4 +12,4 @@ class PageContent extends React.PureComponent<RouteComponentProps> {
     }
 }
 
-export default withRouter(PageContent);
+export default withRouter(PageLayout);
