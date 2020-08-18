@@ -34,8 +34,8 @@ exports[`Header should render properly 1`] = `
   border-radius: 50%;
   overflow: hidden;
   cursor: inherit;
-  color: #005AEE;
-  background: #e6effd;
+  color: #126AFA;
+  background: #E7F0FF;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -56,15 +56,6 @@ exports[`Header should render properly 1`] = `
   border: 0.1rem solid #dfe4e9;
   box-sizing: border-box;
   border-radius: 50%;
-}
-
-.c5:hover {
-  background: #1A6BF0;
-  box-shadow: 0 0.4rem 0.8rem rgba(0,90,238,0.35);
-}
-
-.c5:hover .c2 {
-  color: #ffffff;
 }
 
 .c0 {
