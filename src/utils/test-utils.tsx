@@ -2,6 +2,7 @@ import { initialState } from '@state';
 import { rootSaga } from '@state/sagas';
 import { render, RenderResult } from '@testing-library/react';
 import { defaultTheme } from '@theme';
+import { ToastContainer } from '@medly-components/core';
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 import React from 'react';
@@ -24,7 +25,10 @@ sagaMiddleware.run(rootSaga);
 
 const WithThemeProvider: React.FunctionComponent = props => (
     <ThemeProvider theme={defaultTheme}>
-        <>{props.children}</>
+        <>
+            <ToastContainer position="top-end" />
+            {props.children}
+        </>
     </ThemeProvider>
 );
 
@@ -61,4 +65,3 @@ export const renderWithStoreAndRouter = (ui: React.ReactElement, options?: objec
 export * from '@testing-library/react';
 // override render method
 export { customRender as render, store };
-
