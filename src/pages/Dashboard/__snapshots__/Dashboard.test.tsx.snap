@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard should render properly 1`] = `
-.c1 {
+.c2 {
   margin: 0;
   color: inherit;
   font-size: 1.6rem;
@@ -14,38 +14,60 @@ exports[`Dashboard should render properly 1`] = `
 }
 
 .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+}
+
+.c0 > * + * {
+  margin-top: 2rem;
+}
+
+.c1 {
   background-color: #eff2f4;
   overflow: auto;
   padding-top: 32px;
 }
 
 @media (max-width:1279px) {
-  .c0 {
+  .c1 {
     padding-left: 24px;
     padding-right: 24px;
   }
 }
 
 @media (min-width:1280px) {
-  .c0 {
+  .c1 {
     padding-left: calc(24px + (((100vw - 1280px) / 160) * 16));
     padding-right: calc(24px + (((100vw - 1280px) / 160) * 16));
   }
 }
 
 @media (min-width:1440px) {
-  .c0 {
+  .c1 {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 
 <div>
-  <main
+  <div
     class="c0"
+  />
+  <main
+    class="c1"
   >
     <strong
-      class="c1"
+      class="c2"
     >
       Dashboard Content
     </strong>
@@ -54,7 +76,7 @@ exports[`Dashboard should render properly 1`] = `
 `;
 
 exports[`Dashboard should show loading if isLoading Prop is true 1`] = `
-.c3 {
+.c4 {
   margin: 0;
   color: inherit;
   font-size: 1.6rem;
@@ -66,21 +88,40 @@ exports[`Dashboard should show loading if isLoading Prop is true 1`] = `
   line-height: 2.6rem;
 }
 
-.c2 {
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+}
+
+.c0 > * + * {
+  margin-top: 2rem;
+}
+
+.c3 {
   font-size: 56px;
 }
 
-.c2 * {
+.c3 * {
   fill: #126AFA;
 }
 
-.c0 {
+.c1 {
   background-color: #eff2f4;
   overflow: auto;
   padding-top: 32px;
 }
 
-.c1 {
+.c2 {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -91,35 +132,38 @@ exports[`Dashboard should show loading if isLoading Prop is true 1`] = `
 }
 
 @media (max-width:1279px) {
-  .c0 {
+  .c1 {
     padding-left: 24px;
     padding-right: 24px;
   }
 }
 
 @media (min-width:1280px) {
-  .c0 {
+  .c1 {
     padding-left: calc(24px + (((100vw - 1280px) / 160) * 16));
     padding-right: calc(24px + (((100vw - 1280px) / 160) * 16));
   }
 }
 
 @media (min-width:1440px) {
-  .c0 {
+  .c1 {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 
 <div>
-  <main
+  <div
     class="c0"
+  />
+  <main
+    class="c1"
   >
     <div
-      class="c1"
+      class="c2"
     >
       <svg
-        class="c2"
+        class="c3"
         height="1em"
         viewBox="0 0 100 100"
         width="1em"
@@ -141,7 +185,7 @@ exports[`Dashboard should show loading if isLoading Prop is true 1`] = `
       </svg>
     </div>
     <strong
-      class="c3"
+      class="c4"
     >
       Dashboard Content
     </strong>
