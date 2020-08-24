@@ -74,6 +74,6 @@ module.exports = {
         }),
         new webpack.HashedModuleIdsPlugin(),
         new CompressionPlugin(),
-        new Dotenv()
+        new Dotenv({ systemvars: true })
     ]
 };
