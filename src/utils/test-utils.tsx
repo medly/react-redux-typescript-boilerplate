@@ -1,5 +1,5 @@
-import { initialState } from '@state';
-import { rootSaga } from '@state/sagas';
+import { initialState } from '@store';
+import { rootSaga } from '@store/sagas';
 import { render, RenderResult } from '@testing-library/react';
 import { defaultTheme } from '@theme';
 import { ToastContainer } from '@medly-components/core';
