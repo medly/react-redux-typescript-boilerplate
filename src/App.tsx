@@ -1,7 +1,7 @@
 import { Header, PageLayout, SideNav } from '@components';
 import { CssBaseline, ToastContainer } from '@medly-components/core';
 import Routes from '@routes';
-import { store } from '@state';
+import { store } from '@store';
 import { ThemeProvider } from '@styled';
 import { defaultTheme } from '@theme';
 import React from 'react';

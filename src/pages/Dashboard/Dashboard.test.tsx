@@ -2,7 +2,7 @@ import { renderWithRouter } from '@test-utils';
 import React from 'react';
 import reduxMockStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
-import { initialState } from '@state';
+import { initialState } from '@store';
 import Dashboard from './Dashboard.container';
 
 describe('Dashboard', () => {

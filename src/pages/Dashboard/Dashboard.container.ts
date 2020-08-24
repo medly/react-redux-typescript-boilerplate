@@ -1,4 +1,4 @@
-import { AppState } from '@state';
+import { AppState } from '@store';
 import { connect } from 'react-redux';
 import { StateProps } from './types';
 import { Dashboard } from './Dashboard';
