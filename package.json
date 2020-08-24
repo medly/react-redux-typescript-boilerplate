@@ -56,7 +56,6 @@
         "@medly-components/loaders": "^1.0.12",
         "@medly-components/theme": "^1.8.0",
         "axios": "^0.19.2",
-        "dotenv-webpack": "^2.0.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-redux": "^7.2.0",
