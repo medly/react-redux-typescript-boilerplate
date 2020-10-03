@@ -1,4 +1,4 @@
-import { Header, PageLayout, SideNav } from '@components';
+import { ErrorBoundary, Header, PageLayout, SideNav } from '@components';
 import { CssBaseline, ToastContainer } from '@medly-components/core';
 import Routes from '@routes';
 import { store } from '@store';
@@ -15,12 +15,14 @@ export const App: React.SFC = () => (
             <>
                 <CssBaseline />
                 <Router>
-                    <PageLayout>
-                        <ToastContainer position="top-end" />
-                        <SideNav />
-                        <Header />
-                        <Routes />
-                    </PageLayout>
+                    <ErrorBoundary>
+                        <PageLayout>
+                            <ToastContainer position="top-end" />
+                            <SideNav />
+                            <Header />
+                            <Routes />
+                        </PageLayout>
+                    </ErrorBoundary>
                 </Router>
             </>
         </ThemeProvider>

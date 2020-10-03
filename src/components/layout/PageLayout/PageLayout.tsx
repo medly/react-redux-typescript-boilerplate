@@ -1,15 +1,10 @@
-import React from 'react';
-import { RouteComponentProps, withRouter } from 'react-router-dom';
+import React, { HTMLProps } from 'react';
 import { PageLayoutStyled } from './PageLayout.styled';
 
-class PageLayout extends React.PureComponent<RouteComponentProps> {
-    public componentDidCatch() {
-        this.props.history.push(this.props.location.pathname);
-    }
+const PageLayout: React.FC<HTMLProps<HTMLDivElement>> = React.memo(({ children }) => {
+    return <PageLayoutStyled>{children}</PageLayoutStyled>;
+});
 
-    public render() {
-        return <PageLayoutStyled>{this.props.children}</PageLayoutStyled>;
-    }
-}
+PageLayout.displayName = 'PageLayout';
 
-export default withRouter(PageLayout);
+export default PageLayout;
