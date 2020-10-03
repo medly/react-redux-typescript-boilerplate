@@ -11,6 +11,7 @@ exports[`Dashboard should render properly 1`] = `
   -ms-letter-spacing: 0rem;
   letter-spacing: 0rem;
   line-height: 2.6rem;
+  text-align: initial;
 }
 
 .c0 {
@@ -86,6 +87,7 @@ exports[`Dashboard should show loading if isLoading Prop is true 1`] = `
   -ms-letter-spacing: 0rem;
   letter-spacing: 0rem;
   line-height: 2.6rem;
+  text-align: initial;
 }
 
 .c0 {
