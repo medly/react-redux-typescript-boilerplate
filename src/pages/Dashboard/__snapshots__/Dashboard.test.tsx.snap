@@ -24,7 +24,7 @@ exports[`Dashboard should render properly 1`] = `
   flex-direction: column;
   padding: 2rem;
   position: fixed;
-  z-index: 1000;
+  z-index: 1001;
   top: 0;
   right: 0;
 }
@@ -100,7 +100,7 @@ exports[`Dashboard should show loading if isLoading Prop is true 1`] = `
   flex-direction: column;
   padding: 2rem;
   position: fixed;
-  z-index: 1000;
+  z-index: 1001;
   top: 0;
   right: 0;
 }
