@@ -1,0 +1,10 @@
+{
+    "Medly: React functional component": {
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "prefix": ["react", "rfc"],
+        "body": [
+            "import React from 'react'; \n \nexport const ${1:Component}: React.FC = React.memo(() => {\n    return <${2}></>;\n});\n\n${1}.displayName = '${1}';"
+        ],
+        "description": "Create new react functional component"
+    }
+}

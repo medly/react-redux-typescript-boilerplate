@@ -1,0 +1,8 @@
+{
+    "Medly: Export as default": {
+        "scope": "javascript,javascriptreact,typescript,typescriptreact",
+        "prefix": ["export", "ead"],
+        "body": ["export { ${1:Component} as default } from './${1}'"],
+        "description": "export non default function as default in index.ts"
+    }
+}
