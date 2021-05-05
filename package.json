@@ -4,8 +4,8 @@
     "description": "React Redux Typescript boilerplate",
     "main": "index.js",
     "scripts": {
-        "lint:css": "stylelint 'src/**/*.tsx'",
-        "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
+        "lint:css": "stylelint src/**/*.tsx",
+        "lint:ts": "eslint src/**/*.{ts,tsx}",
         "test:update": "run-p type-check 'test:jest -- -u'",
         "test:watch": "run-p 'type-check -- -w' 'test:jest -- --watch'",
         "test:jest": "jest --config config/jest/jest.config.js",
