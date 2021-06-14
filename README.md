@@ -791,7 +791,7 @@ export type AppState = ReturnType<typeof rootReducer>;
 
 ```javascript
 import { store } from '@store';
-import { ThemeProvider } from '@styled';
+import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from '@theme';
 import React from 'react';
 import * as ReactDOM from 'react-dom';

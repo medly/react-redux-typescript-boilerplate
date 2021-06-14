@@ -1,8 +1,8 @@
+import { ToastContainer } from '@medly-components/core';
 import { initialState } from '@store';
 import { rootSaga } from '@store/sagas';
 import { render, RenderResult } from '@testing-library/react';
 import { defaultTheme } from '@theme';
-import { ToastContainer } from '@medly-components/core';
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 import React from 'react';
@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import reduxMockStore from 'redux-mock-store';
 import reduxSaga from 'redux-saga';
-import { ThemeProvider } from './styled';
+import { ThemeProvider } from 'styled-components';
 
 export const mockAxios = new MockAdapter(axios);
 
