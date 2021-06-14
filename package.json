@@ -4,8 +4,8 @@
     "description": "React Redux Typescript boilerplate",
     "scripts": {
         "clean": "rimraf dist coverage",
-        "lint:css": "stylelint src/**/*.tsx",
-        "lint:ts": "eslint src/**/*.{ts,tsx}",
+        "lint:css": "stylelint 'src/**/*.tsx'",
+        "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
         "lint": "run-p -c lint:*",
         "test:update": "run-p test:types 'test:jest -- -u'",
         "test:watch": "run-p 'test:types -- -w' 'test:jest -- --watch'",

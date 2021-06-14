@@ -17,7 +17,6 @@ export const SideNav: React.SFC & WithStyle = React.memo(() => {
                     <DashboardIcon />
                     <Text>Dashboard</Text>
                 </MedlySideNav.Nav>
-               
             </MedlySideNav.List>
         </MedlySideNav>
     );
