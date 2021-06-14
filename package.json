@@ -6,7 +6,8 @@
         "clean": "rimraf dist coverage",
         "lint:css": "stylelint 'src/**/*.tsx'",
         "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
-        "lint": "run-p -c lint:*",
+        "lint": "run-p lint:ts lint:css",
+        "lint:fix": "run-p 'lint:ts --fix' 'lint:css --fix'",
         "test:update": "run-p test:types 'test:jest -- -u'",
         "test:watch": "run-p 'test:types -- -w' 'test:jest -- --watch'",
         "test:jest": "jest",
@@ -26,7 +27,7 @@
     "lint-staged": {
         "src/**/*.{ts,tsx}": [
             "eslint 'src/**/*.tsx' --fix",
-            "git add"
+            "stylelint 'src/**/*.tsx' --fix"
         ]
     },
     "babel": {
@@ -71,7 +72,7 @@
         "@types/redux-mock-store": "^1.0.2",
         "@types/styled-components": "^5.1.10",
         "axios-mock-adapter": "^1.19.0",
-        "husky": "^6.0.0",
+        "husky": "4.3.6",
         "lint-staged": "^11.0.0",
         "npm-run-all": "^4.1.5",
         "redux-devtools-extension": "^2.13.9",
