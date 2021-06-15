@@ -1,4 +1,4 @@
-import { styled } from '@styled';
+import styled from 'styled-components';
 
 export const PageContent = styled('main')`
     background-color: #eff2f4;

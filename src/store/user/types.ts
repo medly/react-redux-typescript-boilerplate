@@ -2,7 +2,7 @@ import { Action } from 'redux';
 
 export enum UserActionTypes {
     ADD_USER = '@@user/ADD_USER',
-    REMOVE_USER = '@@user/REMOVE_USER',
+    REMOVE_USER = '@@user/REMOVE_USER'
 }
 
 export type UserRoles = 'admin' | '2k+';

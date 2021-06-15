@@ -1,10 +1,10 @@
 import { AppState } from '@store';
 import { connect } from 'react-redux';
-import { StateProps } from './types';
 import { Dashboard } from './Dashboard';
+import { StateProps } from './types';
 
 const mapStateToProps = ({ loading }: AppState): StateProps => ({
     isLoading: loading.dashboard.isLoading
 });
 
-export default connect<StateProps, {}>(mapStateToProps, {})(Dashboard);
+export default connect<StateProps, unknown>(mapStateToProps, {})(Dashboard);

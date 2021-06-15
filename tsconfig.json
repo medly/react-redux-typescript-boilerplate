@@ -1,24 +1,8 @@
 {
+    "extends": "@medly/typescript-config-react",
     "compilerOptions": {
-        "allowJs": true,
         "baseUrl": "src",
-        "esModuleInterop": true,
-        "isolatedModules": true,
-        "forceConsistentCasingInFileNames": true,
-        "jsx": "react",
-        "lib": ["es2017", "es2015", "dom", "es2018.promise"],
-        "module": "esnext",
-        "moduleResolution": "node",
-        "noEmit": true,
-        "resolveJsonModule": true,
-        "rootDir": "../",
-        "skipLibCheck": true,
-        "strict": true,
-        "strictFunctionTypes": false,
-        "strictNullChecks": false,
-        "target": "esnext",
-        "types": ["jest", "testing-library__jest-dom"],
-        "paths": {
+       "paths": {
             "@components": ["components"],
             "@components/*": ["components/*"],
             "@theme": ["theme"],
@@ -36,5 +20,5 @@
         }
     },
     "include": ["src", "types"],
-    "exclude": ["node_modules", ".commitlintrc"]
+    "exclude": ["node_modules", "dist", "coverage"]
 }

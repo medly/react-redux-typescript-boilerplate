@@ -31,6 +31,9 @@ exports[`Header should render properly 1`] = `
 .c6 {
   display: inline-block;
   text-align: center;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
   width: 4rem;
   height: 4rem;
   border-radius: 50%;

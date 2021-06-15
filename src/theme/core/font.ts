@@ -6,7 +6,6 @@ const font: FontTheme = {
         ...defaultTheme.font.defaults,
         color: defaultTheme.colors.black
     }
-    
 };
 
 export default font;

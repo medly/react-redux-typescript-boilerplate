@@ -1,8 +1,8 @@
+import { ToastContainer } from '@medly-components/core';
 import { initialState } from '@store';
 import { rootSaga } from '@store/sagas';
-import { render, RenderResult } from '@testing-library/react';
+import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { defaultTheme } from '@theme';
-import { ToastContainer } from '@medly-components/core';
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 import React from 'react';
@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import reduxMockStore from 'redux-mock-store';
 import reduxSaga from 'redux-saga';
-import { ThemeProvider } from './styled';
+import { ThemeProvider } from 'styled-components';
 
 export const mockAxios = new MockAdapter(axios);
 
@@ -52,13 +52,16 @@ const WithStoreAndRouter: React.FunctionComponent = props => (
     </Provider>
 );
 
-const customRender = (ui: React.ReactElement, options?: object): RenderResult => render(ui, { wrapper: WithThemeProvider, ...options });
+const customRender = (ui: React.ReactElement, options?: RenderOptions): RenderResult =>
+    render(ui, { wrapper: WithThemeProvider, ...options });
 
-export const renderWithStore = (ui: React.ReactElement, options?: object): RenderResult => render(ui, { wrapper: WithStore, ...options });
+export const renderWithStore = (ui: React.ReactElement, options?: RenderOptions): RenderResult =>
+    render(ui, { wrapper: WithStore, ...options });
 
-export const renderWithRouter = (ui: React.ReactElement, options?: object): RenderResult => render(ui, { wrapper: WithRouter, ...options });
+export const renderWithRouter = (ui: React.ReactElement, options?: RenderOptions): RenderResult =>
+    render(ui, { wrapper: WithRouter, ...options });
 
-export const renderWithStoreAndRouter = (ui: React.ReactElement, options?: object): RenderResult =>
+export const renderWithStoreAndRouter = (ui: React.ReactElement, options?: RenderOptions): RenderResult =>
     render(ui, { wrapper: WithStoreAndRouter, ...options });
 
 // re-export everything
