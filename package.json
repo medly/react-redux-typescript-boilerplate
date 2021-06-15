@@ -72,7 +72,7 @@
         "@types/redux-mock-store": "^1.0.2",
         "@types/styled-components": "^5.1.10",
         "axios-mock-adapter": "^1.19.0",
-        "husky": "4.3.6",
+        "husky": "4.3.8",
         "lint-staged": "^11.0.0",
         "npm-run-all": "^4.1.5",
         "redux-devtools-extension": "^2.13.9",
