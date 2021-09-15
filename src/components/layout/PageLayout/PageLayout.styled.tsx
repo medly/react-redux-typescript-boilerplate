@@ -7,7 +7,7 @@ export const PageLayoutStyled = styled('div')`
     grid-template-areas:
         'aside header'
         'aside  main';
-    grid-template-rows: max-content auto;
+    grid-template-rows: auto 1fr;
     grid-template-columns: auto 1fr;
 
     & > aside {
