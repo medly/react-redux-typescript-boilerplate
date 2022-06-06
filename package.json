@@ -47,7 +47,7 @@
         "@medly-components/layout": "^1.22.2",
         "@medly-components/loaders": "^1.1.1",
         "@medly-components/theme": "^1.30.9",
-        "axios": "^0.21.1",
+        "axios": "^0.21.2",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-redux": "^7.2.4",
